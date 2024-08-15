@@ -9,11 +9,8 @@ import java.util.List;
 @Service
 public class OperationHistoryService {
 
-    private final OperationRecordRepository operationRecordRepository;
+    private  OperationRecordRepository operationRecordRepository;
 
-    public OperationHistoryService(OperationRecordRepository operationRecordRepository) {
-        this.operationRecordRepository = operationRecordRepository;
-    }
 
     public List<OperationRecord> getAllOperations() {
         return operationRecordRepository.findAll();

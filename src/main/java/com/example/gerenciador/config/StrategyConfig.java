@@ -9,11 +9,6 @@ import org.springframework.context.annotation.Lazy;
 @Configuration
 public class StrategyConfig {
 
-    private final OperationRecordRepository operationRecordRepository;
-
-    public StrategyConfig(OperationRecordRepository operationRecordRepository) {
-        this.operationRecordRepository = operationRecordRepository;
-    }
 
     @Bean
     @Lazy
@@ -25,12 +20,6 @@ public class StrategyConfig {
     @Lazy
     public CompoundInterestService compoundInterestService() {
         return new CompoundInterestService();
-    }
-
-    @Bean
-    @Lazy
-    public ResultProcessingService resultProcessingService() {
-        return new ResultProcessingService(operationRecordRepository);
     }
 
     @Bean

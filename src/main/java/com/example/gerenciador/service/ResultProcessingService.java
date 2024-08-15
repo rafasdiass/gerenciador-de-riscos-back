@@ -3,6 +3,7 @@ package com.example.gerenciador.service;
 import com.example.gerenciador.model.OperationRecord;
 import com.example.gerenciador.model.ResultRequest;
 import com.example.gerenciador.repository.OperationRecordRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
@@ -10,11 +11,7 @@ import java.time.LocalDateTime;
 @Service
 public class ResultProcessingService {
 
-    private final OperationRecordRepository operationRecordRepository;
-
-    public ResultProcessingService(OperationRecordRepository operationRecordRepository) {
-        this.operationRecordRepository = operationRecordRepository;
-    }
+    private  OperationRecordRepository operationRecordRepository;
 
     public void processResult(ResultRequest request) {
         if ("win".equals(request.getResult())) {
