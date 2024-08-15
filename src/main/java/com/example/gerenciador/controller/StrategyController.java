@@ -30,7 +30,7 @@ public class StrategyController {
         this.customStrategyService = customStrategyService;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/simple-interest")
     public ResponseEntity<Double> calculateSimpleInterest(@RequestBody SimpleInterestRequest request) {
         double result = simpleInterestService.calculateSimpleInterest(request.getInitialAmount(),
@@ -38,7 +38,7 @@ public class StrategyController {
         return ResponseEntity.ok(result);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/soros")
     public ResponseEntity<Double> calculateSoros(@RequestBody SorosRequest request) {
         double result = sorosService.calculateSoros(request.getInitialAmount(), request.getPayoutPercent(),
@@ -46,7 +46,7 @@ public class StrategyController {
         return ResponseEntity.ok(result);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/custom-strategy")
     public ResponseEntity<Double> calculateCustomStrategy(@RequestBody CustomStrategyRequest request) {
         double result = customStrategyService.calculateCustomStrategy(request.getInitialAmount(),
@@ -54,7 +54,7 @@ public class StrategyController {
         return ResponseEntity.ok(result);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/martingale")
     public ResponseEntity<Double> calculateMartingale(@RequestBody MartingaleRequest request) {
         double result = martingaleService.calculateMartingale(request.getInitialAmount(), request.getPayoutPercent(),
@@ -62,7 +62,7 @@ public class StrategyController {
         return ResponseEntity.ok(result);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/compound-interest")
     public ResponseEntity<Double> calculateCompoundInterest(@RequestBody CompoundInterestRequest request) {
         double result = compoundInterestService.calculateCompoundInterest(request.getInitialAmount(),
@@ -70,7 +70,7 @@ public class StrategyController {
         return ResponseEntity.ok(result);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping("/process-result")
     public ResponseEntity<Void> processResult(@RequestBody ResultRequest request) {
         resultProcessingService.processResult(request);
