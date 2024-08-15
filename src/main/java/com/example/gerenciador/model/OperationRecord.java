@@ -1,7 +1,6 @@
 package com.example.gerenciador.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,13 +20,13 @@ public class OperationRecord {
     // Construtor padrão
     public OperationRecord() {}
 
-    // Construtor com todos os campos
-    public OperationRecord(double bet, double payout, double resultAmount, boolean win) {
+    // Construtor com todos os campos, exceto o ID, que é gerado automaticamente
+    public OperationRecord(double bet, double payout, double resultAmount, boolean win, LocalDateTime timestamp) {
         this.bet = bet;
         this.payout = payout;
         this.resultAmount = resultAmount;
         this.win = win;
-        this.timestamp = LocalDateTime.now(); // Marca o momento da operação
+        this.timestamp = timestamp;
     }
 
     // Getters e Setters

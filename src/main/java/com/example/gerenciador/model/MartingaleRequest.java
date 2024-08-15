@@ -3,9 +3,9 @@ package com.example.gerenciador.model;
 public class MartingaleRequest {
     private double initialAmount;
     private double payoutPercent;
+    private int rounds;
 
-    // Getters and Setters
-
+    // Getters and setters
     public double getInitialAmount() {
         return initialAmount;
     }
@@ -20,5 +20,13 @@ public class MartingaleRequest {
 
     public void setPayoutPercent(double payoutPercent) {
         this.payoutPercent = payoutPercent;
+    }
+
+    public int getRounds() {
+        return rounds;
+    }
+
+    public void setRounds(int rounds) {
+        this.rounds = rounds;
     }
 }
