@@ -18,7 +18,8 @@ public class OperationRecord {
     private LocalDateTime timestamp;
 
     // Construtor padrão
-    public OperationRecord() {}
+    public OperationRecord() {
+    }
 
     // Construtor com todos os campos, exceto o ID, que é gerado automaticamente
     public OperationRecord(double bet, double payout, double resultAmount, boolean win, LocalDateTime timestamp) {
