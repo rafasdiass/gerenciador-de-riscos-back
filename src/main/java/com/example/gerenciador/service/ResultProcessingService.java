@@ -3,7 +3,6 @@ package com.example.gerenciador.service;
 import com.example.gerenciador.model.OperationRecord;
 import com.example.gerenciador.model.ResultRequest;
 import com.example.gerenciador.repository.OperationRecordRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 

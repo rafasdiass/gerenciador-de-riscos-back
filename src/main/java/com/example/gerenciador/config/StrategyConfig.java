@@ -1,6 +1,5 @@
 package com.example.gerenciador.config;
 
-import com.example.gerenciador.repository.OperationRecordRepository;
 import com.example.gerenciador.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
