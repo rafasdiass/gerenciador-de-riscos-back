@@ -5,7 +5,7 @@ public class MartingaleRequest {
     private double payoutPercent;
     private int rounds;
 
-    // Getters and setters
+    // Getters e setters
     public double getInitialAmount() {
         return initialAmount;
     }
